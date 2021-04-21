@@ -10,8 +10,5 @@ getdata = function(crypto='bitcoin', start_date='2011-01-01', end_date='2021-04-
   df = read.csv(text=to_df)
   df = df[-1,]
   df$Close = as.numeric(df$Close)
-  
-  return (df)
-  
-  
+  return (df) 
 }
