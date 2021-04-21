@@ -1,4 +1,4 @@
-getprice = function(symbol='ethereum', start_date='2011-01-01', end_date='2021-04-21'){
+getdata = function(symbol='ethereum', start_date='2011-01-01', end_date='2021-04-21'){
   library('rvest')
   webpage = read_html(paste0("https://www.coingecko.com/en/coins/",symbol,
                              "/historical_data/usd?start_date=", start_date,"&end_date=",end_date,"#panel"))
