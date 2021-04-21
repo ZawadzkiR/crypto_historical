@@ -1,6 +1,6 @@
-getdata = function(symbol='ethereum', start_date='2011-01-01', end_date='2021-04-21'){
+getdata = function(crypto='bitcoin', start_date='2011-01-01', end_date='2021-04-21'){
   library('rvest')
-  webpage = read_html(paste0("https://www.coingecko.com/en/coins/",symbol,
+  webpage = read_html(paste0("https://www.coingecko.com/en/coins/",crypto,
                              "/historical_data/usd?start_date=", start_date,"&end_date=",end_date,"#panel"))
   tbls = html_nodes(webpage, "tr")
   table = tbls %>% html_text()
